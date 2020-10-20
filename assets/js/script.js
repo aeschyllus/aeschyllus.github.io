@@ -13,14 +13,7 @@ window.addEventListener('scroll', () => {
 
     translate.forEach(element => {
         let rate = element.dataset.rate;
-
-        if (element.dataset.direction === 'left') {
-            element.style.transform = `translateX(-${scroll * rate}px)`;
-        } else if (element.dataset.direction === 'right') {
-            element.style.transform = `translateX(${scroll * rate}px)`;
-        } else {
-            element.style.transform = `translateY(-${scroll * rate}px)`;
-        }
+        element.style.transform = `translateX(${scroll * rate}px)`;
     });
 
     opacity.forEach(element => {

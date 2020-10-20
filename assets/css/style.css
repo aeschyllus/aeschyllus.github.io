@@ -1,29 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
+/* #eeeeee - #dddddd - #40e0d0 - #00868b - #262626 */
 :root {
-    --background-color: #1b1b1b;
-    --primary-color: #f39c12;
-    --secondary-color: #fff;
+    --background-color: #151515;
+    --primary-color: #ddd;
+    --accent-color: #40e0d0;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--background-color);
 }
 
 .intro {
     font-family: 'Poppins', sans-serif;
-    background: url("../img/intro-bg.jpg");
+    /* background: url("../img/intro-bg2.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--secondary-color);
+    background-size: cover; */
+    color: var(--primary-color);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    padding: 1em 3em;
+    padding: 1em 5em;
     position: relative;
     overflow: hidden;
 }
@@ -34,6 +36,10 @@
 
 .intro-content h1 {
     font-size: 4em;
+}
+
+.intro-content h1 span {
+    color: var(--accent-color);
 }
 
 .intro-content h2 {
@@ -58,18 +64,19 @@ section .container {
 }
 
 section img {
-    width: 80%;
+    width: 100%;
+    max-width: 600px;
     display: block;
     margin: 0 auto;
 }
 
 .content {
     transform: translateY(-50px);
+    color: var(--primary-color);
 }
 
 /* This class can be re-used for different divs */
 .title {
-    color: var(--primary-color);
     font-weight: 600;
     font-size: 2em; /* Currently fit for laptop screens only */
     margin-bottom: 1em;
@@ -84,7 +91,7 @@ section img {
     bottom: 0;
     height: 3px;
     width: 5em;
-    background-color: var(--background-color);
+    background-color: var(--accent-color);
 }
 
 .text {
