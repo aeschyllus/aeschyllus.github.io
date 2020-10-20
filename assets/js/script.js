@@ -1,3 +1,4 @@
+const intro = document.querySelector('.intro');
 const translate = document.querySelectorAll('.translate');
 const section = document.querySelector('section');
 const content = document.querySelector('.content');
@@ -5,11 +6,14 @@ const img = document.querySelector('.img-container');
 const opacity = document.querySelectorAll('.opacity');
 const border = document.querySelector('.border');
 
+let introHeight = intro.offsetHeight;
 let sectionHeight = section.offsetHeight;
 
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
+
+    intro.style.opacity = - scroll / (introHeight / 2) + 1;
 
     translate.forEach(element => {
         let rate = element.dataset.rate;
