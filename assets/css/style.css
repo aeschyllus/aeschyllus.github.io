@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
-/* #eeeeee - #dddddd - #40e0d0 - #00868b - #262626 */
 :root {
     --background-color: #151515;
     --primary-color: #ddd;
-    --accent-color: #40e0d0;
+    --accent-color: #f39c12;
 }
 
 * {
@@ -13,20 +12,16 @@
     padding: 0;
     box-sizing: border-box;
     background-color: var(--background-color);
+    font-family: Arial;
 }
 
 .intro {
-    font-family: 'Poppins', sans-serif;
-    /* background: url("../img/intro-bg2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
     color: var(--primary-color);
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 1em 5em;
-    position: relative;
+    padding: 3em;
     overflow: hidden;
 }
 
@@ -36,14 +31,22 @@
 
 .intro-content h1 {
     font-size: 4em;
+    margin: 0.25em 0;
 }
 
 .intro-content h1 span {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 0.1em;
+    border-radius: 10px;
 }
 
 .intro-content h2 {
     font-size: 2em;
+}
+
+.test {
+    height: 100vh;
 }
 
 section {
@@ -51,15 +54,14 @@ section {
 }
 
 section .container {
-    font-family: 'Raleway', sans-serif;
-    padding: 3em;
-
+    /* font-family: 'Raleway', sans-serif; */
     /* TODO: Setup grid for mobile devices */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     grid-gap: 1.75em;
+    padding: 3em;
     min-height: 100vh;
 }
 
@@ -110,4 +112,34 @@ section img {
 
 .opacity {
     opacity: 0;
+}
+
+.outro {
+    height: 100vh;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.outro-content {
+    text-align: center;
+}
+
+.outro-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+    transform: translateX(-100px);
+}
+
+.outro-content h1 {
+    font-size: 4.5em;
+}
+
+.outro-content h1 span {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 0.1em;
+    border-radius: 10px;
 }
